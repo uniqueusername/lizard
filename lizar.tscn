@@ -22,21 +22,6 @@ size = Vector2(57, 150)
 radius = 65.0
 height = 240.0
 
-[sub_resource type="Animation" id="Animation_4p0gy"]
-resource_name = "blink"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Vector2(0.22, 0.05), Vector2(0.22, 0.22)]
-}
-
 [sub_resource type="Animation" id="Animation_17k7n"]
 length = 0.001
 tracks/0/type = "value"
@@ -50,6 +35,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0.22, 0.22)]
+}
+
+[sub_resource type="Animation" id="Animation_4p0gy"]
+resource_name = "blink"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0.22, 0.05), Vector2(0.22, 0.22)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ebtar"]
@@ -210,9 +210,10 @@ food_container = NodePath("../../food_container")
 
 [node name="hungry" type="Label" parent="lizard/head"]
 offset_left = 344.0
-offset_top = -692.0
+offset_top = -1000.0
 offset_right = 490.0
-offset_bottom = -546.0
+offset_bottom = -854.0
+scale = Vector2(2, 2)
 theme_override_font_sizes/font_size = 106
 text = "🍗"
 
@@ -220,15 +221,29 @@ text = "🍗"
 position = Vector2(95, 113)
 texture = ExtResource("5_5n8gg")
 
+[node name="asleep" type="Label" parent="lizard/head"]
+offset_left = 344.0
+offset_top = -1000.0
+offset_right = 490.0
+offset_bottom = -854.0
+scale = Vector2(2, 2)
+theme_override_font_sizes/font_size = 106
+text = "🌃"
+
+[node name="Sprite2D" type="Sprite2D" parent="lizard/head/asleep"]
+position = Vector2(95, 113)
+texture = ExtResource("5_5n8gg")
+
 [node name="Timer" type="Timer" parent="lizard/head"]
 autostart = true
 
 [node name="head_shape" type="Sprite2D" parent="lizard/head"]
+scale = Vector2(2.1, 2.1)
 texture = ExtResource("4_efa1y")
-offset = Vector2(150, -64)
+offset = Vector2(180, -64)
 
 [node name="Area2D" type="Area2D" parent="lizard/head/head_shape"]
-position = Vector2(135, -63)
+position = Vector2(161.905, -62.8571)
 collision_layer = 2
 collision_mask = 0
 
@@ -253,11 +268,11 @@ libraries = {
 }
 
 [node name="RayCast2D" type="RayCast2D" parent="lizard/head"]
-target_position = Vector2(0, 5000)
+target_position = Vector2(0, 50000)
 
 [node name="RayCast2D2" type="RayCast2D" parent="lizard/head"]
 position = Vector2(5, 0)
-target_position = Vector2(0, 5000)
+target_position = Vector2(0, 50000)
 
 [node name="segment2" type="Sprite2D" parent="lizard/head"]
 top_level = true
@@ -546,7 +561,7 @@ autostart = true
 autostart = true
 
 [node name="sleep_timer" type="Timer" parent="lizard"]
-wait_time = 60.0
+wait_time = 10.0
 one_shot = true
 
 [node name="food_container" type="Node2D" parent="."]

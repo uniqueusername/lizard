@@ -6,7 +6,7 @@ signal new_food
 
 var vertical: bool = true
 var target_margin: float = 3
-var scale: Vector2 = Vector2(0.25, 0.25)
+var scale: Vector2 = Vector2(0.1, 0.1)
 var food_count: int = 0
 
 func _input(event: InputEvent):

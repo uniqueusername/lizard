@@ -10,6 +10,7 @@ radius = 10.0685
 height = 33.1177
 
 [node name="food" type="RigidBody2D"]
+collision_layer = 0
 physics_material_override = SubResource("PhysicsMaterial_8txok")
 script = ExtResource("1_8txok")
 
