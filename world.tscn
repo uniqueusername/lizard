@@ -1,0 +1,97 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1yebb2ga4e0o"]
+
+[ext_resource type="Texture2D" uid="uid://clb3ovvsuenya" path="res://circle.png" id="1_aqk2v"]
+[ext_resource type="Script" uid="uid://7vdvs3b66w5y" path="res://head.gd" id="2_tlwt5"]
+[ext_resource type="Script" uid="uid://ct082ursmkarp" path="res://segment.gd" id="3_tlwt5"]
+[ext_resource type="Script" uid="uid://byybs8begert4" path="res://legs.gd" id="4_aqk2v"]
+
+[node name="world" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("1_aqk2v")
+script = ExtResource("2_tlwt5")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(0, 0, 0, 1)
+top_level = true
+position = Vector2(-150, 0)
+texture = ExtResource("1_aqk2v")
+script = ExtResource("3_tlwt5")
+
+[node name="legs" type="Node2D" parent="Sprite2D/Sprite2D2"]
+position = Vector2(0, 25)
+script = ExtResource("4_aqk2v")
+
+[node name="1" type="Sprite2D" parent="Sprite2D/Sprite2D2/legs"]
+position = Vector2(50, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_aqk2v")
+
+[node name="2" type="Sprite2D" parent="Sprite2D/Sprite2D2/legs"]
+position = Vector2(-50, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_aqk2v")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D/Sprite2D2"]
+modulate = Color(0, 0, 0, 1)
+top_level = true
+position = Vector2(-300, 0)
+texture = ExtResource("1_aqk2v")
+script = ExtResource("3_tlwt5")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Sprite2D/Sprite2D2/Sprite2D3"]
+modulate = Color(0, 0, 0, 1)
+top_level = true
+position = Vector2(-450, 0)
+texture = ExtResource("1_aqk2v")
+script = ExtResource("3_tlwt5")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Sprite2D/Sprite2D2/Sprite2D3/Sprite2D4"]
+modulate = Color(0, 0, 0, 1)
+top_level = true
+position = Vector2(-450, 0)
+texture = ExtResource("1_aqk2v")
+script = ExtResource("3_tlwt5")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Sprite2D/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5"]
+modulate = Color(0, 0, 0, 1)
+top_level = true
+position = Vector2(-450, 0)
+texture = ExtResource("1_aqk2v")
+script = ExtResource("3_tlwt5")
+
+[node name="legs" type="Node2D" parent="Sprite2D/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6"]
+position = Vector2(0, 25)
+script = ExtResource("4_aqk2v")
+
+[node name="1" type="Sprite2D" parent="Sprite2D/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/legs"]
+position = Vector2(50, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_aqk2v")
+
+[node name="2" type="Sprite2D" parent="Sprite2D/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/legs"]
+position = Vector2(-50, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_aqk2v")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Sprite2D/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6"]
+modulate = Color(0, 0, 0, 1)
+top_level = true
+position = Vector2(-450, 0)
+texture = ExtResource("1_aqk2v")
+script = ExtResource("3_tlwt5")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Sprite2D/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7"]
+modulate = Color(0, 0, 0, 1)
+top_level = true
+position = Vector2(-450, 0)
+texture = ExtResource("1_aqk2v")
+script = ExtResource("3_tlwt5")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Sprite2D/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7/Sprite2D8"]
+modulate = Color(0, 0, 0, 1)
+top_level = true
+position = Vector2(-450, 0)
+texture = ExtResource("1_aqk2v")
+script = ExtResource("3_tlwt5")
