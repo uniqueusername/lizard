@@ -1,7 +1,22 @@
 extends Node
 
+signal feed_lizard
+signal spawn_food
+signal new_food
+
 var vertical: bool = true
+var target_margin: float = 3
+var scale: Vector2 = Vector2(0.25, 0.25)
+var food_count: int = 0
 
 func _input(event: InputEvent):
 	if event.is_action_pressed("ui_focus_next"):
 		vertical = not vertical
+		
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().quit()
+		
+	if event.is_action_pressed("ui_select"):
+		if food_count > 0:
+			spawn_food.emit()
+			food_count -= 1

@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=3 uid="uid://bngmgtqp8g2v7"]
+
+[ext_resource type="Texture2D" uid="uid://buvk8ef0aib24" path="res://icon.svg" id="1_pr334"]
+[ext_resource type="Script" uid="uid://drlv8n03jbat5" path="res://scripts/head.gd" id="2_7a6am"]
+[ext_resource type="Script" uid="uid://bbamn5igjtpsh" path="res://scripts/segment.gd" id="3_7a6am"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="head" type="Sprite2D" parent="."]
+top_level = true
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_pr334")
+script = ExtResource("2_7a6am")
+
+[node name="segment1" type="Sprite2D" parent="head"]
+top_level = true
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_pr334")
+script = ExtResource("3_7a6am")
+
+[node name="leg1" type="Sprite2D" parent="head/segment1"]
+position = Vector2(0, 132)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_pr334")
+
+[node name="foot" type="Sprite2D" parent="head/segment1/leg1"]
+texture = ExtResource("1_pr334")
+
+[node name="segment2" type="Sprite2D" parent="head/segment1"]
+top_level = true
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_pr334")
+script = ExtResource("3_7a6am")
+
+[node name="segment3" type="Sprite2D" parent="head/segment1/segment2"]
+top_level = true
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_pr334")
+script = ExtResource("3_7a6am")
+
+[node name="segment4" type="Sprite2D" parent="head/segment1/segment2/segment3"]
+top_level = true
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_pr334")
+script = ExtResource("3_7a6am")
+
+[node name="segment5" type="Sprite2D" parent="head/segment1/segment2/segment3/segment4"]
+top_level = true
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_pr334")
+script = ExtResource("3_7a6am")
+
+[node name="segment6" type="Sprite2D" parent="head/segment1/segment2/segment3/segment4/segment5"]
+top_level = true
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_pr334")
+script = ExtResource("3_7a6am")
+
+[node name="segment7" type="Sprite2D" parent="head/segment1/segment2/segment3/segment4/segment5/segment6"]
+top_level = true
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_pr334")
+script = ExtResource("3_7a6am")
+
+[node name="segment9" type="Sprite2D" parent="head/segment1/segment2/segment3/segment4/segment5/segment6/segment7"]
+top_level = true
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_pr334")
+script = ExtResource("3_7a6am")
+
+[node name="segment8" type="Sprite2D" parent="head/segment1/segment2/segment3/segment4/segment5/segment6/segment7/segment9"]
+top_level = true
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_pr334")
+script = ExtResource("3_7a6am")
+
+[node name="tail" type="Sprite2D" parent="head/segment1/segment2/segment3/segment4/segment5/segment6/segment7/segment9/segment8"]
+top_level = true
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_pr334")
+script = ExtResource("3_7a6am")

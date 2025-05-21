@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://b6pjtjnvh75g5"]
+
+[node name="food_label" type="Label"]
+theme_override_font_sizes/font_size = 48
+text = "🍗"

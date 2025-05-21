@@ -1,0 +1,158 @@
+[gd_scene load_steps=6 format=3 uid="uid://bngmgtqp8g2v7"]
+
+[ext_resource type="Texture2D" uid="uid://buvk8ef0aib24" path="res://icon.svg" id="1_pr334"]
+[ext_resource type="Texture2D" uid="uid://cawkgrsbabswl" path="res://circle.svg" id="2_5pgwc"]
+[ext_resource type="Script" uid="uid://drlv8n03jbat5" path="res://scripts/head.gd" id="2_7a6am"]
+[ext_resource type="Script" uid="uid://bbamn5igjtpsh" path="res://scripts/segment.gd" id="3_7a6am"]
+[ext_resource type="Texture2D" uid="uid://5xpkviq8q0po" path="res://head.svg" id="4_efa1y"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="terrain" type="StaticBody2D" parent="."]
+position = Vector2(643, 697)
+
+[node name="Line2D" type="Line2D" parent="terrain"]
+points = PackedVector2Array(-418, -69, -495, -56, -657, 30, 668, 34, 615, -7, 491, -30, 343, -35, 134, -16, -105, -26)
+closed = true
+width = 5.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="terrain"]
+build_mode = 1
+polygon = PackedVector2Array(-418, -69, -495, -56, -657, 30, 668, 34, 615, -7, 491, -30, 343, -35, 134, -16, -105, -26)
+
+[node name="Sprite2D" type="Sprite2D" parent="terrain"]
+visible = false
+scale = Vector2(10.165, 0.42)
+texture = ExtResource("1_pr334")
+
+[node name="head" type="Sprite2D" parent="."]
+top_level = true
+texture = ExtResource("2_5pgwc")
+offset = Vector2(0, -16)
+script = ExtResource("2_7a6am")
+
+[node name="Line2D" type="Line2D" parent="head"]
+top_level = true
+
+[node name="Sprite2D" type="Sprite2D" parent="head"]
+texture = ExtResource("4_efa1y")
+offset = Vector2(92, -64)
+
+[node name="RayCast2D" type="RayCast2D" parent="head"]
+target_position = Vector2(0, 5000)
+
+[node name="segment2" type="Sprite2D" parent="head"]
+top_level = true
+position = Vector2(-27, 0)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("2_5pgwc")
+offset = Vector2(0, -16)
+script = ExtResource("3_7a6am")
+dist_constraint = 30.0
+
+[node name="segment3" type="Sprite2D" parent="head/segment2"]
+top_level = true
+position = Vector2(-57, 0)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_5pgwc")
+offset = Vector2(0, -16)
+script = ExtResource("3_7a6am")
+dist_constraint = 30.0
+
+[node name="segment4" type="Sprite2D" parent="head/segment2/segment3"]
+top_level = true
+position = Vector2(-90, 0)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_5pgwc")
+offset = Vector2(0, -16)
+script = ExtResource("3_7a6am")
+dist_constraint = 30.0
+
+[node name="segment5" type="Sprite2D" parent="head/segment2/segment3/segment4"]
+top_level = true
+position = Vector2(-125, 0)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_5pgwc")
+offset = Vector2(0, -16)
+script = ExtResource("3_7a6am")
+dist_constraint = 30.0
+
+[node name="segment6" type="Sprite2D" parent="head/segment2/segment3/segment4/segment5"]
+top_level = true
+position = Vector2(-165, 0)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_5pgwc")
+offset = Vector2(0, -16)
+script = ExtResource("3_7a6am")
+dist_constraint = 30.0
+
+[node name="segment7" type="Sprite2D" parent="head/segment2/segment3/segment4/segment5/segment6"]
+top_level = true
+position = Vector2(-201, 0)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_5pgwc")
+offset = Vector2(0, -16)
+script = ExtResource("3_7a6am")
+dist_constraint = 30.0
+
+[node name="segment8" type="Sprite2D" parent="head/segment2/segment3/segment4/segment5/segment6/segment7"]
+top_level = true
+position = Vector2(-237, 0)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_5pgwc")
+offset = Vector2(0, -16)
+script = ExtResource("3_7a6am")
+dist_constraint = 30.0
+
+[node name="segment9" type="Sprite2D" parent="head/segment2/segment3/segment4/segment5/segment6/segment7/segment8"]
+top_level = true
+position = Vector2(-273, 0)
+texture = ExtResource("2_5pgwc")
+offset = Vector2(0, -16)
+script = ExtResource("3_7a6am")
+dist_constraint = 30.0
+
+[node name="segment10" type="Sprite2D" parent="head/segment2/segment3/segment4/segment5/segment6/segment7/segment8/segment9"]
+top_level = true
+position = Vector2(-304, 0)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_5pgwc")
+offset = Vector2(0, -16)
+script = ExtResource("3_7a6am")
+dist_constraint = 30.0
+
+[node name="segment11" type="Sprite2D" parent="head/segment2/segment3/segment4/segment5/segment6/segment7/segment8/segment9/segment10"]
+top_level = true
+position = Vector2(-332, 0)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_5pgwc")
+offset = Vector2(0, -16)
+script = ExtResource("3_7a6am")
+dist_constraint = 30.0
+
+[node name="segment12" type="Sprite2D" parent="head/segment2/segment3/segment4/segment5/segment6/segment7/segment8/segment9/segment10/segment11"]
+top_level = true
+position = Vector2(-359, 0)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_5pgwc")
+offset = Vector2(0, -16)
+script = ExtResource("3_7a6am")
+dist_constraint = 30.0
+
+[node name="segment13" type="Sprite2D" parent="head/segment2/segment3/segment4/segment5/segment6/segment7/segment8/segment9/segment10/segment11/segment12"]
+top_level = true
+position = Vector2(-382, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_5pgwc")
+offset = Vector2(0, -16)
+script = ExtResource("3_7a6am")
+dist_constraint = 30.0
+
+[node name="segment14" type="Sprite2D" parent="head/segment2/segment3/segment4/segment5/segment6/segment7/segment8/segment9/segment10/segment11/segment12/segment13"]
+top_level = true
+position = Vector2(-402, 0)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_5pgwc")
+offset = Vector2(0, -16)
+script = ExtResource("3_7a6am")
+dist_constraint = 30.0
