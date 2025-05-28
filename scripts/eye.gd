@@ -10,6 +10,5 @@ func sleep() -> void:
 	
 func wake_up() -> void:
 	scale.y = 0.22
-	print("askjfsadf")
 	$Timer.paused = false
 	$Timer.start(randi_range(1, 60))

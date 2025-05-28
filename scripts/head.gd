@@ -27,8 +27,10 @@ func _process(delta: float) -> void:
 		if not get_parent().sleeping and not get_parent().dead: global_position = new_pos
 
 func _on_timer_timeout() -> void:
-	target = randi_range(0, get_viewport_rect().size.x)
-	$Timer.start(randi_range(5, 25))
+	if not get_parent().dead:
+		target = randi_range(0, get_viewport_rect().size.x)
+		$Timer.start(randi_range(5, 25))
 
 func set_target(new_target: Vector2):
-	target = new_target.x
+	if not get_parent().dead:
+		target = new_target.x

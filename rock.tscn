@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxhm7qdp55jr0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b4wt3"]
+radius = 20.025
+
+[node name="Label" type="Label"]
+offset_left = 1035.0
+offset_top = 579.0
+offset_right = 1087.0
+offset_bottom = 646.0
+theme_override_font_sizes/font_size = 36
+text = "🪨"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(20, 23)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_b4wt3")

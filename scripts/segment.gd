@@ -16,5 +16,3 @@ func _process(delta: float) -> void:
 		var new_position = global_position.move_toward(forward_segment.global_position, diff - dist_constraint)
 		moving_right = new_position.x > global_position.x
 		position = new_position
-		
-	

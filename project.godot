@@ -23,8 +23,14 @@ Global="*res://global.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/mode=3
 window/stretch/mode="canvas_items"
+
+[layer_names]
+
+2d_physics/layer_1="walls"
+2d_physics/layer_2="lizard eat"
+2d_physics/layer_3="rocks"
+2d_physics/layer_4="food"
 
 [rendering]
 
